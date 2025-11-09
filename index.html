@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mayank Raj - Cybersecurity Researcher | Machine Learning Expert | PhD Candidate">
+    <meta name="keywords" content="Mayank Raj, Cybersecurity, Machine Learning, NIDS, Adversarial ML, Research">
+    <meta name="author" content="Mayank Raj">
+    
+    <title>Mayank Raj | Cybersecurity Researcher</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="light-mode">
+    <!-- Animated Network Background Canvas -->
+    <canvas id="networkCanvas" class="network-canvas"></canvas>
+    
+    <!-- Particle System -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Cybersecurity Background Animation -->
+    <div class="cyber-background"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">MR</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research & Publications</a></li>
+                <li><a href="#scholar-services" class="nav-link">Scholar Services</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- Theme toggle removed - using light mode only -->
+                <!--
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    <span class="gradient-text-secondary">Hi, I'm</span> <span class="gradient-text">Mayank Raj</span>
+                </h1>
+                <p class="hero-subtitle">AI & Cybersecurity Researcher</p>
+                <p class="hero-description">
+                    Master's in Data Science | Graduate Research Assistant at UMass Dartmouth<br>
+                    Specializing in Adversarial Risk Analysis & Network Intrusion Detection
+                </p>
+                <div class="hero-buttons">
+                    <a href="#research" class="btn btn-primary">View Research</a>
+                    <a href="assets/cv.pdf" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-file-pdf"></i> Download CV
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mraj11" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/mayank02raj" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mraj1@umassd.edu" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://scholar.google.com" target="_blank" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                <div class="image-container">
+                    <div class="glow-effect"></div>
+                    <img src="assets/img/profile.jpg" alt="Mayank Raj" class="profile-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="lead">
+                        I'm a Master's student in Data Science at the University of Massachusetts Dartmouth 
+                        , working as a Graduate Research Assistant under 
+                        <strong>Dr. Gokhan Kul</strong> on Department of Defense-funded cybersecurity research.
+                    </p>
+                    <p>
+                        My research focuses on <strong>adversarial risk analysis</strong>, 
+                        <strong>network intrusion detection systems</strong>, and 
+                        <strong>attack chain prediction</strong> using the MITRE ATT&CK framework. 
+                        I've authored three research papers currently under review, collaborating with 
+                        the U.S. Military Academy on national security applications.
+                    </p>
+                    <p>
+                        I'm passionate about securing AI systems through adversarial understanding and 
+                        robust design, with expertise spanning cybersecurity research, machine learning, 
+                        and software engineering.
+                    </p>
+                    
+                    <div class="research-interests">
+                        <h3>Research Interests</h3>
+                        <div class="interests-grid">
+                            <div class="interest-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Adversarial Machine Learning</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Network Intrusion Detection</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Deep Learning Robustness</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Cyber Threat Intelligence</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-database"></i>
+                                <span>Synthetic Data Generation</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-lock"></i>
+                                <span>AI Security & Safety</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Research Papers<br>(Under Review)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-number">DoD</div>
+                        <div class="stat-label">Funded Project<br>(Grant W911NF-22-2-0160)<br>U.S. Military Academy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-award"></i></div>
+                        <div class="stat-number">3.60</div>
+                        <div class="stat-label">GPA<br>Master's Program</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Students<br>Mentored</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Publications Section -->
+    <section id="research" class="research-publications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Research & Publications</h2>
+            <p class="section-subtitle" data-aos="fade-up">
+                Department of Defense-Funded Project (Grant W911NF-22-2-0160) in collaboration with U.S. Military Academy
+            </p>
+
+            <div class="publications-grid">
+                <!-- Publication 1 -->
+                <div class="publication-card" data-aos="fade-up">
+                    <div class="pub-header">
+                        <div class="pub-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="pub-meta">
+                            <span class="pub-status">Under Review</span>
+                            <span class="pub-venue">IEEE Access</span>
+                        </div>
+                    </div>
+                    <h3 class="pub-title">Categorical Robustness Assessment and Model Evaluation for Machine Learning Based Network Intrusion Detection Systems</h3>
+                    <p class="pub-authors">Raj M, Bastian N.D, Kul G, Fiondella L.</p>
+                    <p class="pub-description">
+                        Designed and evaluated adversarial robustness framework for ML-based NIDS, achieving 93.97% baseline accuracy on 1.2M+ packet ACI-IoT-2023 dataset. Demonstrated up to 77% model performance degradation under FGSM/PGD attacks using CLEVER score analysis.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://github.com/mayank02raj/Robustness-of-NIDS" target="_blank" class="pub-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="pub-link disabled" title="Paper link will be available upon publication">
+                            <i class="fas fa-file-pdf"></i> Paper (Coming Soon)
+                        </a>
+                        <a href="https://scholar.google.com" target="_blank" class="pub-link">
+                            <i class="fas fa-graduation-cap"></i> Scholar
+                        </a>
+                    </div>
+                    <div class="pub-tags">
+                        <span class="tag">Adversarial ML</span>
+                        <span class="tag">NIDS</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Security</span>
+                    </div>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pub-header">
+                        <div class="pub-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="pub-meta">
+                            <span class="pub-status">To be Submitted</span>
+                            <span class="pub-venue">NDSS Workshop</span>
+                        </div>
+                    </div>
+                    <h3 class="pub-title">Synthetic Network Packet Generation through Statistical Learning and Genetic Algorithms</h3>
+                    <p class="pub-authors">Raj M, Bastian N.D, Kul G, Fiondella L.</p>
+                    <p class="pub-description">
+                        Developed novel synthetic IoT network packet generator combining statistical learning and genetic algorithms, validated through dual anomaly detection achieving <1.2% anomaly rate. Enables privacy-preserving dataset generation for cybersecurity research.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://github.com/mayank02raj/Synthetic-Network-Packet-Generation" target="_blank" class="pub-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="pub-link disabled" title="Paper link will be available upon publication">
+                            <i class="fas fa-file-pdf"></i> Paper (Coming Soon)
+                        </a>
+                        <a href="https://scholar.google.com" target="_blank" class="pub-link">
+                            <i class="fas fa-graduation-cap"></i> Scholar
+                        </a>
+                    </div>
+                    <div class="pub-tags">
+                        <span class="tag">Synthetic Data</span>
+                        <span class="tag">Genetic Algorithms</span>
+                        <span class="tag">IoT Security</span>
+                        <span class="tag">Privacy</span>
+                    </div>
+                </div>
+
+                <!-- Publication 3 -->
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pub-header">
+                        <div class="pub-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="pub-meta">
+                            <span class="pub-status">To be Submitted</span>
+                            <span class="pub-venue">NDSS Workshop</span>
+                        </div>
+                    </div>
+                    <h3 class="pub-title">MITRE ATT&CK-based Attack Chain Prediction using Hybrid LSTM-Markov Models for Cybersecurity Risk Assessment</h3>
+                    <p class="pub-authors">Raj M, Bastian N.D, Kul G, Fiondella L.</p>
+                    <p class="pub-description">
+                        Engineered hybrid LSTM-Markov models for MITRE ATT&CK-based attack chain prediction with integrated probabilistic risk scoring framework. Enables proactive threat intelligence and security posture assessment.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://github.com/mayank02raj/MITRE-ATTACK-based-Attack-Chain-Prediction" target="_blank" class="pub-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="pub-link disabled" title="Paper link will be available upon publication">
+                            <i class="fas fa-file-pdf"></i> Paper (Coming Soon)
+                        </a>
+                        <a href="https://scholar.google.com" target="_blank" class="pub-link">
+                            <i class="fas fa-graduation-cap"></i> Scholar
+                        </a>
+                    </div>
+                    <div class="pub-tags">
+                        <span class="tag">MITRE ATT&CK</span>
+                        <span class="tag">LSTM</span>
+                        <span class="tag">Threat Intelligence</span>
+                        <span class="tag">Risk Assessment</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Scholar Services Section -->
+    <section id="scholar-services" class="scholar-services-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Scholar Services</h2>
+            <p class="section-subtitle" data-aos="fade-up">Contributing to the academic community through peer review</p>
+            
+            <div class="scholar-services-content" data-aos="fade-up">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="service-details">
+                        <h3>Conference Reviewer</h3>
+                        <div class="service-item">
+                            <div class="service-title">
+                                <i class="fas fa-check-circle"></i>
+                                <strong>IEEE MILCOM 2025 (W07)</strong>
+                            </div>
+                            <p class="service-description">
+                                Peer reviewer for IEEE Military Communications Conference 2025, evaluating submissions in cybersecurity, machine learning, and network security domains.
+                            </p>
+                            <span class="service-date"><i class="far fa-calendar"></i> August 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Experience</h2>
+            
+            <div class="timeline">
+                <!-- Research Assistant -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2025 - Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Research Assistant</h3>
+                            <h4>University of Massachusetts Dartmouth</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
+                        </div>
+                        <p class="timeline-subtitle">Department of Defense-Funded Project (Grant W911NF-22-2-0160) | Advisor: Dr. Gokhan Kul</p>
+                        <ul class="timeline-list">
+                            <li>Designed and evaluated adversarial robustness framework for ML-based Network Intrusion Detection Systems, achieving 93.97% baseline accuracy on 1.2M+ packet ACI-IoT-2023 dataset</li>
+                            <li>Demonstrated up to 77% model performance degradation under FGSM/PGD attacks using CLEVER score analysis</li>
+                            <li>Developed novel synthetic IoT network packet generator combining statistical learning and genetic algorithms</li>
+                            <li>Engineered hybrid LSTM-Markov models for MITRE ATT&CK-based attack chain prediction</li>
+                            <li>Collaborated with military researchers on national security applications; presented findings at research meetings</li>
+                            <li>Reviewer at IEEE MILCOM 2025</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Adversarial ML</span>
+                            <span class="tag">NIDS</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">MITRE ATT&CK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graduate TA - Database Design -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Sept 2025 - Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Graduate Teaching Assistant - Database Design (CIS-552)</h3>
+                            <h4>University of Massachusetts Dartmouth</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Mentored 50+ graduate students in advanced database systems, focusing on relational algebra, query optimization, and AI-driven architectures</li>
+                            <li>Delivered instruction on vector databases, learned query optimization, ML-based cost estimation, and distributed/NoSQL systems</li>
+                            <li>Guided projects on ER modeling, schema optimization, indexing strategies, and recovery protocols</li>
+                            <li>Integrated emerging database technologies (feature stores, data lakehouses, AI-native consistency models) into coursework</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Database Systems</span>
+                            <span class="tag">Teaching</span>
+                            <span class="tag">AI Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Technician -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2024 - Aug 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Research Technician/Digitizer</h3>
+                            <h4>School of Marine Science and Technology - UMass Dartmouth</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
+                        </div>
+                        <p class="timeline-subtitle">Stokesbury Lab</p>
+                        <ul class="timeline-list">
+                            <li>Participated in oceanographic field expeditions operating specialized seafloor mapping equipment (HabCam, video survey systems)</li>
+                            <li>Developed automated data processing pipelines analyzing terabytes of seafloor imagery using machine learning and computer vision</li>
+                            <li>Performed quantitative spatial analysis with geospatial tools (GeoPandas, QGIS) to evaluate environmental factors</li>
+                            <li>Contributed computational expertise to data-driven fisheries management strategies</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Geospatial Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graduate TA - Programming -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Sept 2024 - Dec 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Graduate Teaching Assistant - Procedural Programming (CIS-190)</h3>
+                            <h4>University of Massachusetts Dartmouth</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Led hands-on lab sessions for 30+ undergraduate students in C/C++ programming, debugging techniques, and code optimization</li>
+                            <li>Developed and presented instructional materials on data structures, memory management, pointers, and file I/O operations</li>
+                            <li>Fostered algorithmic thinking and problem-solving skills through structured exercises and real-world programming challenges</li>
+                            <li>Provided individualized mentoring during office hours, guiding students through complex programming concepts</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">C/C++</span>
+                            <span class="tag">Teaching</span>
+                            <span class="tag">Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corsair Engage Specialist -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2024 - Apr 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Corsair Engage Specialist</h3>
+                            <h4>Leduc Center for Civic Engagement - UMass Dartmouth</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Managed student administration, overseeing community service participation and records</li>
+                            <li>Organized and coordinated community service events to engage students in volunteer activities</li>
+                            <li>Maintained and updated the admin page for community service-related initiatives</li>
+                            <li>Collaborated with campus departments and external organizations to enhance student engagement in community outreach</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Community Service</span>
+                            <span class="tag">Administration</span>
+                            <span class="tag">Event Planning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Scientist -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2020 - Apr 2023</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Data Scientist</h3>
+                            <h4>Eklavya Estate Private Limited</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Architected ETL pipelines processing 500K+ real estate records with 99.7% accuracy through automated validation protocols</li>
+                            <li>Developed time series models (ARIMA, LSTM) for housing price prediction across 15+ markets with monthly executive reporting</li>
+                            <li>Applied ML techniques (Random Forest, XGBoost) to customer analysis, improving prediction accuracy by 18% and reducing loss ratio by 12%</li>
+                            <li>Enhanced trend analysis efficiency by 15% using automated data mining, NLP, and interactive dashboards (Tableau, Power BI)</li>
+                            <li>Implemented A/B testing and hypothesis testing for pricing strategies, informing $2M+ annual revenue decisions</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">ETL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Engineer -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Sept 2019 - Jan 2020</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer</h3>
+                            <h4>Eklavya Estate Private Limited</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Designed RESTful APIs using Django and Flask to integrate legacy systems with cloud infrastructure</li>
+                            <li>Architected AWS microservices (EC2, S3, RDS, Lambda) supporting 10K+ concurrent users with load balancing and auto-scaling</li>
+                            <li>Containerized applications using Docker and Kubernetes, reducing deployment time by 60%</li>
+                            <li>Developed secure file transfer dashboard with end-to-end encryption for automated local-to-remote synchronization</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Apr 2016 - Aug 2016</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Internship</h3>
+                            <h4>Hindustan Aeronautics Limited (HAL)</h4>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Applied ML algorithms with pneumatic control systems for automated testing of GSLV Mk 3 and PSLV Mk 2 rocket systems</li>
+                            <li>Developed ML-powered quality control dashboards for production monitoring of fighter jets (Su-30MKI, Tejas) and combat helicopters (Apache, LCH)</li>
+                            <li>Gained experience in industrial automation, control systems, and real-time data processing for mission-critical defense applications</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Industrial Automation</span>
+                            <span class="tag">Defense</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Other Projects</h2>
+            <p class="section-subtitle" data-aos="fade-up">
+                Additional software development and data science projects
+            </p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Hospital Management System</h3>
+                    <p class="project-description">
+                        Comprehensive hospital management system with patient records, appointment scheduling, and inventory management. Built with modern web technologies and database design principles.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/mayank02raj/Hospital-Management-System" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Database</span>
+                        <span class="tag">Healthcare</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Movie Rating Predictions System</h3>
+                    <p class="project-description">
+                        Machine learning-based movie rating prediction system using collaborative filtering and content-based recommendation algorithms. Analyzes user preferences and movie features.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/mayank02raj/Movie-Rating-Predictions-System" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Recommendation System</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Profiles REST API</h3>
+                    <p class="project-description">
+                        RESTful API for managing user profiles with authentication, authorization, and CRUD operations. Demonstrates best practices in API design and development.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/mayank02raj/profiles_rest_api-master" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">REST API</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">Backend</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Authentication System</h3>
+                    <p class="project-description">
+                        Secure authentication and login system using BCrypt and Werkzeug packages. Implements password hashing, session management, and security best practices.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/mayank02raj/Authentication-User-and-Login-using-BCrypt-and-WerkZeug-Packages-master" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Authentication</span>
+                        <span class="tag">Flask</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Languages</h2>
+            
+            <div class="skills-container">
+                <!-- Programming & Scripting -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-code"></i> Programming & Scripting</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-r-project"></i>
+                            <span>R</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Bash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & APIs -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks & APIs</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Django</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>RESTful APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine & Deep Learning -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-brain"></i> Machine & Deep Learning</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cube"></i>
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cog"></i>
+                            <span>XGBoost</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Keras</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i>
+                            <span>PyCaret</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>FGSM/PGD</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>MITRE ATT&CK</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-dna"></i>
+                            <span>Genetic Algorithms</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wave-square"></i>
+                            <span>Diffusion & VAE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science & Analytics -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-chart-bar"></i> Data Science & Analytics</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>SciPy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-area"></i>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Seaborn</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Plotly</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-map"></i>
+                            <span>GeoPandas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NLP & Computer Vision -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-eye"></i> NLP & Computer Vision</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-language"></i>
+                            <span>NLTK</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-comments"></i>
+                            <span>SpaCy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & Deployment -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-cloud"></i> Cloud & Deployment</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Microsoft Azure</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>IBM Cloud</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization & BI -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-chart-pie"></i> Visualization & BI</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Tableau</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-excel"></i>
+                            <span>Advanced Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-globe"></i> Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-comment"></i>
+                            <span>English (Fluent)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-comment"></i>
+                            <span>Hindi (Fluent)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-comment"></i>
+                            <span>Spanish (Basic)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+            
+            <div class="certifications-grid">
+                <!-- Cybersecurity -->
+                <div class="cert-category" data-aos="fade-up">
+                    <div class="cert-category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Career Essentials in Cybersecurity</h4>
+                                <p>Microsoft and LinkedIn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science & Analytics -->
+                <div class="cert-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-category-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Data Science & Analytics</h3>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Data Science Specialization</h4>
+                                <p>Johns Hopkins University</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Data Analytics Certification</h4>
+                                <p>Google</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Professional Data Science Certification</h4>
+                                <p>IBM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Deep Learning -->
+                <div class="cert-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Deep Learning</h3>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Deep Learning: Neural Network, AI, ChatGPT</h4>
+                                <p>Industry Certification</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Deep Learning and Computer Vision</h4>
+                                <p>Industry Certification</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Mathematical Foundations of Machine Learning</h4>
+                                <p>Industry Certification</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Artificial Intelligence: Building AI + LLM and ChatGPT</h4>
+                                <p>Industry Certification</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="cert-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Python Specialization</h4>
+                                <p>University of Michigan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Computing -->
+                <div class="cert-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Computing</h3>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-details">
+                                <h4>Amazon Web Services Certification</h4>
+                                <p>Amazon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <p class="section-subtitle" data-aos="fade-up">
+                I'm actively seeking PhD opportunities in Computer Science with focus on Cybersecurity
+            </p>
+            
+            <div class="contact-content" data-aos="fade-up">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:mraj1@umassd.edu">mraj1@umassd.edu</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+17743657257">+1 (774) 365-7257</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Dartmouth, MA, USA</p>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="cta-section" data-aos="fade-up">
+                <h3>Open to Research Collaborations</h3>
+                <p>
+                    Interested in discussing research opportunities, collaborations, or my work? 
+                    Feel free to reach out!
+                </p>
+                <div class="cta-buttons">
+                    <a href="mailto:mraj1@umassd.edu" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/mraj11" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Mayank Raj</h3>
+                    <p>Securing AI systems through adversarial understanding and robust design</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mraj11" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/mayank02raj" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:mraj1@umassd.edu">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://scholar.google.com" target="_blank">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mayank Raj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
