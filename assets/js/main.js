@@ -71,8 +71,8 @@ class NetworkAnimation {
     }
     
     animate() {
-        // Light mode only - no theme checking needed
         this.time += 0.02;
+        const isDark = document.body.classList.contains('dark-mode');
         
         // Clear canvas completely for clean look
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -118,14 +118,15 @@ class NetworkAnimation {
                 const dy = particle.y - particle2.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
-                // Draw connections for nearby particles - light mode colors
+                // Draw connections for nearby particles
                 if (distance < 150) {
                     const opacity = (1 - distance / 150) * 0.8;
                     const lineWidth = 1.3;
                     
-                    // Dark blue for light mode background
                     this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(30, 64, 175, ${opacity})`;
+                    this.ctx.strokeStyle = isDark 
+                        ? `rgba(96, 165, 250, ${opacity * 0.6})` 
+                        : `rgba(30, 64, 175, ${opacity})`;
                     this.ctx.lineWidth = lineWidth;
                     this.ctx.moveTo(particle.x, particle.y);
                     this.ctx.lineTo(particle2.x, particle2.y);
@@ -133,7 +134,7 @@ class NetworkAnimation {
                 }
             }
             
-            // Draw glowing node with sharp edges - light mode colors only
+            // Draw glowing node with sharp edges
             const nodeSize = particle.radius + pulse * 0.5;
             const glowSize = nodeSize + 3;
             
@@ -143,11 +144,17 @@ class NetworkAnimation {
                 particle.x, particle.y, glowSize * 1.5
             );
             
-            // Dark blue gradient for light mode
-            gradient.addColorStop(0, 'rgba(30, 64, 175, 1)');
-            gradient.addColorStop(0.4, 'rgba(37, 99, 235, 0.8)');
-            gradient.addColorStop(0.7, 'rgba(59, 130, 246, 0.5)');
-            gradient.addColorStop(1, 'rgba(96, 165, 250, 0)');
+            if (isDark) {
+                gradient.addColorStop(0, 'rgba(96, 165, 250, 1)');
+                gradient.addColorStop(0.4, 'rgba(59, 130, 246, 0.7)');
+                gradient.addColorStop(0.7, 'rgba(37, 99, 235, 0.4)');
+                gradient.addColorStop(1, 'rgba(30, 64, 175, 0)');
+            } else {
+                gradient.addColorStop(0, 'rgba(30, 64, 175, 1)');
+                gradient.addColorStop(0.4, 'rgba(37, 99, 235, 0.8)');
+                gradient.addColorStop(0.7, 'rgba(59, 130, 246, 0.5)');
+                gradient.addColorStop(1, 'rgba(96, 165, 250, 0)');
+            }
             
             // Draw sharper glow
             this.ctx.beginPath();
@@ -158,13 +165,13 @@ class NetworkAnimation {
             // Draw solid node with crisp edges
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, nodeSize, 0, Math.PI * 2);
-            this.ctx.fillStyle = '#1e40af'; // Dark blue for light background
+            this.ctx.fillStyle = isDark ? '#60a5fa' : '#1e40af';
             this.ctx.fill();
             
             // Add bright center highlight
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, nodeSize * 0.5, 0, Math.PI * 2);
-            this.ctx.fillStyle = 'rgba(255, 255, 255, 1)'; // Fully opaque
+            this.ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 1)';
             this.ctx.fill();
         }
         
@@ -208,24 +215,44 @@ AOS.init({
 });
 
 // ===========================
-// Theme Toggle - DISABLED (Light Mode Only)
+// Theme Toggle
 // ===========================
-// Dark mode completely removed for stability
-// Portfolio uses light mode only with dark blue mesh
-
-/*
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-if (!themeToggle) {
-    console.error('Theme toggle button not found');
-} else {
-    // ... theme toggle code removed ...
+// Check saved preference or system preference
+function getPreferredTheme() {
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
-*/
 
-// Force light mode
-document.body.classList.add('light-mode');
+function setTheme(theme) {
+    if (theme === 'dark') {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+    } else {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('theme', theme);
+    
+    // Update canvas colors if network mesh exists
+    if (window.networkMesh) {
+        window.networkMesh.isDark = theme === 'dark';
+    }
+}
+
+// Apply initial theme
+setTheme(getPreferredTheme());
+
+// Toggle on click
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const current = body.classList.contains('dark-mode') ? 'dark' : 'light';
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+}
 
 // ===========================
 // Mobile Navigation
