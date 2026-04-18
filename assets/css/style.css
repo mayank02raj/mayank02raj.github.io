@@ -39,23 +39,30 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Theme - DISABLED (Light mode only for stability) */
-/*
+/* Dark Theme */
 body.dark-mode {
     --bg-light: #0f172a;
-    --bg-lighter: #1e293b;
-    --bg-card: #334155;
+    --bg-lighter: #0b1120;
+    --bg-card: #1e293b;
     --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
-    --border-color: #475569;
+    --border-color: #334155;
     
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
 }
-*/
+
+/* Dark mode canvas visibility */
+.dark-mode .network-canvas {
+    opacity: 0.6;
+}
+
+.dark-mode .cyber-background {
+    opacity: 0.15;
+}
 
 html {
     scroll-behavior: smooth;
@@ -2213,4 +2220,234 @@ section {
 .project-card:hover .tag::before,
 .timeline-content:hover .tag::before {
     opacity: 1;
+}
+
+/* ===========================
+   Dark Mode - Comprehensive Overrides
+   =========================== */
+
+/* Sections with explicit backgrounds */
+.dark-mode .about,
+.dark-mode .experience,
+.dark-mode .skills,
+.dark-mode .certifications,
+.dark-mode .contact,
+.dark-mode .scholar-services-section,
+.dark-mode .projects {
+    background-color: var(--bg-lighter);
+}
+
+.dark-mode .research-publications {
+    background: linear-gradient(135deg, var(--bg-light), rgba(59, 130, 246, 0.05));
+}
+
+/* Navbar */
+.dark-mode .navbar {
+    background: rgba(11, 17, 32, 0.95);
+    border-bottom-color: var(--border-color);
+}
+
+/* Cards */
+.dark-mode .publication-card,
+.dark-mode .project-card,
+.dark-mode .stat-card,
+.dark-mode .cert-category,
+.dark-mode .service-card,
+.dark-mode .skill-category {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+.dark-mode .publication-card:hover,
+.dark-mode .project-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+}
+
+/* Timeline */
+.dark-mode .timeline-content {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+.dark-mode .timeline-content:hover {
+    border-color: var(--primary-color);
+}
+
+.dark-mode .timeline::before {
+    background: var(--border-color);
+}
+
+.dark-mode .timeline-dot {
+    background: var(--primary-color);
+    border-color: var(--bg-lighter);
+}
+
+/* Tags */
+.dark-mode .tag {
+    background: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Buttons */
+.dark-mode .btn-secondary {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.dark-mode .btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Skill items */
+.dark-mode .skill-item {
+    background: rgba(59, 130, 246, 0.08);
+    border-color: rgba(59, 130, 246, 0.2);
+    color: var(--text-secondary);
+}
+
+.dark-mode .skill-item:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: var(--primary-color);
+}
+
+/* Cert items */
+.dark-mode .cert-item {
+    background: rgba(59, 130, 246, 0.05);
+    border-color: var(--border-color);
+}
+
+/* Contact section */
+.dark-mode .contact-item {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+.dark-mode .cta-section {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+/* Footer */
+.dark-mode .footer {
+    background: #060a14;
+    border-top-color: var(--border-color);
+}
+
+/* Scroll top button */
+.dark-mode .scroll-top {
+    background: var(--primary-color);
+}
+
+/* Links */
+.dark-mode .pub-link {
+    background: rgba(59, 130, 246, 0.1);
+    color: #93c5fd;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode .pub-link:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.dark-mode .project-link {
+    color: #93c5fd;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Interest items */
+.dark-mode .interest-item {
+    background: rgba(59, 130, 246, 0.08);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Research interests heading */
+.dark-mode .research-interests h3 {
+    color: var(--text-primary);
+}
+
+/* Theme toggle icon swap */
+.dark-mode .theme-toggle .fa-moon { display: none; }
+.dark-mode .theme-toggle .fa-sun { display: inline-block; }
+.light-mode .theme-toggle .fa-sun { display: none; }
+.light-mode .theme-toggle .fa-moon { display: inline-block; }
+
+/* Hero badges in dark mode */
+.dark-mode .hero-description {
+    color: var(--text-secondary);
+}
+
+/* Nav links */
+.dark-mode .nav-link {
+    color: var(--text-secondary);
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+    color: var(--primary-color);
+}
+
+.dark-mode .nav-logo {
+    color: var(--text-primary);
+}
+
+/* Mobile nav menu */
+@media (max-width: 768px) {
+    .dark-mode .nav-menu.active {
+        background: var(--bg-light);
+    }
+}
+
+/* Section titles */
+.dark-mode .section-title::after {
+    background: var(--gradient-primary);
+}
+
+/* Hamburger */
+.dark-mode .hamburger span {
+    background: var(--text-primary);
+}
+
+/* Glow effect around profile image */
+.dark-mode .glow-effect {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+}
+
+/* About stats grid glow */
+.dark-mode .stat-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Scholar services */
+.dark-mode .service-card {
+    border-color: var(--border-color);
+}
+
+/* Cert category header */
+.dark-mode .cert-category-header {
+    border-bottom-color: var(--border-color);
+}
+
+/* Dark mode: Hero proof-point badges */
+.dark-mode .hero-content [style*="rgba(59,130,246,0.1)"],
+.dark-mode .hero-content [style*="rgba(245,158,11,0.1)"],
+.dark-mode .hero-content [style*="rgba(16,185,129,0.1)"],
+.dark-mode .hero-content [style*="rgba(139,92,246,0.1)"] {
+    border-color: rgba(255,255,255,0.15) !important;
+}
+
+/* Dark mode: Hero eyebrow text */
+.dark-mode .hero-eyebrow {
+    color: #60a5fa !important;
+}
+
+/* Dark mode: Thesis Core badges on publication cards */
+.dark-mode .pub-status[style*="background: linear-gradient"] {
+    opacity: 0.9;
 }
