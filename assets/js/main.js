@@ -72,7 +72,11 @@ class NetworkAnimation {
     
     animate() {
         this.time += 0.02;
-        const isDark = document.body.classList.contains('dark-mode');
+        // setTheme() keeps this in sync; read the DOM only on the first frame
+        if (this.isDark === undefined) {
+            this.isDark = document.body.classList.contains('dark-mode');
+        }
+        const isDark = this.isDark;
         
         // Clear canvas completely for clean look
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -228,6 +232,10 @@ function getPreferredTheme() {
 }
 
 function setTheme(theme) {
+    const root = document.documentElement;
+    // Suppress transitions for this frame so the swap is one repaint, not ~250 animations
+    root.classList.add('theme-switching');
+
     if (theme === 'dark') {
         body.classList.add('dark-mode');
         body.classList.remove('light-mode');
@@ -241,6 +249,12 @@ function setTheme(theme) {
     if (window.networkMesh) {
         window.networkMesh.isDark = theme === 'dark';
     }
+
+    // Flush the new styles, then re-enable transitions on the next frame
+    void root.offsetWidth;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+        root.classList.remove('theme-switching');
+    }));
 }
 
 // Apply initial theme
