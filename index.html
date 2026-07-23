@@ -3,30 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mayank Raj - Cybersecurity Researcher & ML Engineer | 4 First-Author Papers (2 Accepted) | DoD-Funded Research | NCAE Cyber Games Champion">
-    <meta name="keywords" content="Mayank Raj, Cybersecurity, Machine Learning, NIDS, Adversarial ML, Research, STEM OPT, ML Engineer, Security Researcher">
+    <meta name="description" content="Mayank Raj - PhD student in Computer Science at the University of Illinois Chicago. Adversarial risk analysis, threat intelligence, and machine learning for intrusion detection.">
+    <meta name="keywords" content="Mayank Raj, adversarial risk analysis, intrusion detection, MITRE ATT&CK, provenance, APT detection, machine learning security, UIC">
     <meta name="author" content="Mayank Raj">
-    
-    <title>Mayank Raj | Cybersecurity Researcher</title>
-    
+    <link rel="canonical" href="https://mayank02raj.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Mayank Raj | Security Researcher">
+    <meta property="og:description" content="PhD student in Computer Science at the University of Illinois Chicago. Adversarial risk analysis and machine learning for intrusion detection.">
+    <meta property="og:url" content="https://mayank02raj.github.io/">
+    <meta property="og:image" content="https://mayank02raj.github.io/assets/img/profile.jpg">
+
+    <title>Mayank Raj | Security Researcher</title>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Additive styles only. Nothing here overrides existing rules in style.css. -->
+    <style>
+        .pub-ids {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            opacity: 0.65;
+            margin: 0.4rem 0 0.6rem;
+            letter-spacing: 0.2px;
+        }
+        .pub-note {
+            font-size: 0.78rem;
+            opacity: 0.75;
+            font-style: italic;
+            margin: 0.3rem 0 0.6rem;
+        }
+        .bibtex-block { margin-top: 0.75rem; }
+        .bibtex-block summary {
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            opacity: 0.75;
+            list-style: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.2rem 0;
+        }
+        .bibtex-block summary::-webkit-details-marker { display: none; }
+        .bibtex-block summary:hover { opacity: 1; }
+        .bibtex-block summary::before { content: "\2b95"; font-size: 0.7rem; transition: transform 0.2s ease; display: inline-block; }
+        .bibtex-block[open] summary::before { transform: rotate(90deg); }
+        .bibtex-wrap { position: relative; }
+        .bibtex-block pre {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            line-height: 1.55;
+            padding: 0.85rem 0.9rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 0.5rem 0 0;
+            background: rgba(127, 127, 127, 0.10);
+            border: 1px solid rgba(127, 127, 127, 0.20);
+            white-space: pre;
+        }
+        .bibtex-copy {
+            position: absolute;
+            top: 0.9rem;
+            right: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            background: rgba(127, 127, 127, 0.18);
+            border: 1px solid rgba(127, 127, 127, 0.28);
+            color: inherit;
+        }
+        .bibtex-copy:hover { background: rgba(127, 127, 127, 0.30); }
+
+        .role-list { list-style: none; padding: 0; margin: 0; }
+        .role-item {
+            display: grid;
+            grid-template-columns: 190px 1fr;
+            gap: 1.25rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid rgba(127, 127, 127, 0.18);
+        }
+        .role-item:last-child { border-bottom: none; }
+        .role-when {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            opacity: 0.7;
+            padding-top: 0.15rem;
+        }
+        .role-what h4 { margin: 0 0 0.2rem; font-size: 1rem; font-weight: 600; }
+        .role-org { font-size: 0.88rem; opacity: 0.85; margin: 0 0 0.4rem; }
+        .role-what p.role-detail { font-size: 0.88rem; line-height: 1.6; margin: 0; opacity: 0.9; }
+        @media (max-width: 700px) {
+            .role-item { grid-template-columns: 1fr; gap: 0.35rem; }
+        }
+
+        .cert-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        .cert-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.4rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            background: rgba(127, 127, 127, 0.10);
+            border: 1px solid rgba(127, 127, 127, 0.22);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+        }
+    </style>
+
+    <!-- Structured data so search engines connect the name to the affiliation and profiles -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mayank Raj",
+      "url": "https://mayank02raj.github.io/",
+      "image": "https://mayank02raj.github.io/assets/img/profile.jpg",
+      "jobTitle": "PhD Student, Computer Science",
+      "affiliation": { "@type": "Organization", "name": "University of Illinois Chicago" },
+      "alumniOf": { "@type": "Organization", "name": "University of Massachusetts Dartmouth" },
+      "email": "mailto:raj02mayank@gmail.com",
+      "knowsAbout": ["Intrusion Detection", "Adversarial Risk Analysis", "Cyber Threat Intelligence", "Machine Learning Security", "Provenance Analysis"],
+      "sameAs": [
+        "https://scholar.google.com/citations?user=AtN6P1QAAAAJ",
+        "https://github.com/mayank02raj",
+        "https://www.linkedin.com/in/mayank02raj"
+      ]
+    }
+    </script>
 </head>
 <body class="light-mode">
     <!-- Animated Network Background Canvas -->
     <canvas id="networkCanvas" class="network-canvas"></canvas>
-    
+
     <!-- Particle System -->
     <div class="particles-container" id="particles"></div>
-    
+
     <!-- Cybersecurity Background Animation -->
     <div class="cyber-background"></div>
 
@@ -36,13 +169,10 @@
             <a href="#home" class="nav-logo">MR</a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#scholar-services" class="nav-link">Scholar Services</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#service" class="nav-link">Service</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#awards" class="nav-link">Awards</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
@@ -63,50 +193,55 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content" data-aos="fade-up">
-                <p class="hero-eyebrow" style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 0.5rem; opacity: 0.9;">Cybersecurity Research &bull; Adversarial ML &bull; Network Defense</p>
+                <p class="hero-eyebrow" style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 0.5rem; opacity: 0.9;">Adversarial Risk Analysis &bull; Threat Intelligence &bull; Intrusion Detection</p>
                 <h1 class="hero-title">
                     <span class="gradient-text">Mayank Raj</span>
                 </h1>
-                <p class="hero-subtitle" style="font-size: 1.3rem; max-width: 600px; line-height: 1.6;">
-                    I break ML-based security systems to make them unbreakable. 
-                    4 first-author papers. DoD-funded. NCAE champion.
+                <p class="hero-subtitle" style="font-size: 1.2rem; max-width: 640px; line-height: 1.65;">
+                    I work on reasoning about adversary behavior under uncertainty: turning threat
+                    intelligence into detection decisions that hold up against an attacker who knows
+                    the detector is there.
+                </p>
+
+                <p style="font-size: 0.9rem; opacity: 0.85; margin: 1.25rem 0 0.35rem; line-height: 1.6;">
+                    <strong>Ph.D. student, Computer Science</strong> &bull; University of Illinois Chicago, from Fall 2026<br>
+                    Advised by <strong>Prof. V.N. Venkatakrishnan</strong>
+                </p>
+                <p style="font-size: 0.85rem; opacity: 0.65; margin-bottom: 1.25rem;">
+                    M.S. Data Science (Thesis Track), UMass Dartmouth &bull; thesis defense August 2026
                 </p>
 
                 <!-- Proof points as visual badges -->
-                <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0;">
+                <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.5rem;">
                     <span style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">
-                        <i class="fas fa-file-alt" style="color: var(--primary-color);"></i> 4 Papers (2 Accepted, 2 Under Review)
-                    </span>
-                    <span style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">
-                        <i class="fas fa-trophy" style="color: #f59e0b;"></i> NCAE Cyber Games 1st Place
+                        <i class="fas fa-file-alt" style="color: var(--primary-color);"></i> 4 first-author papers &bull; 2 peer-reviewed, 2 preprints
                     </span>
                     <span style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">
-                        <i class="fas fa-shield-alt" style="color: #10b981;"></i> DoD &bull; West Point Collaboration
+                        <i class="fas fa-shield-alt" style="color: #10b981;"></i> DoD-funded &bull; West Point collaboration
                     </span>
-                    <span style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.25); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">
-                        <i class="fas fa-check-circle" style="color: #8b5cf6;"></i> STEM OPT &bull; 3 Yrs U.S. Work Auth
+                    <span style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">
+                        <i class="fas fa-trophy" style="color: #f59e0b;"></i> NCAE Cyber Games, 1st place
                     </span>
                 </div>
 
-                <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 1.5rem;">
-                    MS Data Science (Thesis Track) &bull; UMass Dartmouth &bull; Graduating May 2026
-                </p>
-
                 <div class="hero-buttons">
-                    <a href="#research" class="btn btn-primary">View Research</a>
-                    <a href="assets/cv.pdf" target="_blank" class="btn btn-secondary">
-                        <i class="fas fa-file-pdf"></i> Download Resume
+                    <a href="#publications" class="btn btn-primary">Publications</a>
+                    <a href="https://scholar.google.com/citations?user=AtN6P1QAAAAJ" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
                     </a>
-                    <a href="mailto:raj02mayank@gmail.com" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Hire Me
+                    <a href="assets/cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fas fa-file-pdf"></i> Curriculum Vitae
                     </a>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/mayank02raj" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="https://scholar.google.com/citations?user=AtN6P1QAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
                     </a>
-                    <a href="https://github.com/mayank02raj" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/mayank02raj" target="_blank" rel="noopener" aria-label="GitHub">
                         <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mayank02raj" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="mailto:raj02mayank@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
@@ -121,7 +256,7 @@
             </div>
         </div>
         <div class="scroll-indicator">
-            <a href="#about">
+            <a href="#about" aria-label="Scroll to about section">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
@@ -130,166 +265,257 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <h2 class="section-title" data-aos="fade-up">About</h2>
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
                     <p class="lead">
-                        I'm completing my MS in Data Science (thesis track) at the University of Massachusetts Dartmouth, 
-                        working as a Graduate Research Assistant under 
-                        <strong>Dr. Gokhan Kul</strong> on Department of Defense-funded cybersecurity research 
-                        in collaboration with the U.S. Military Academy at West Point.
+                        I am starting a Ph.D. in Computer Science at the University of Illinois Chicago in
+                        Fall 2026, advised by <strong>Prof. V.N. Venkatakrishnan</strong>, where I will work on
+                        provenance-based detection of advanced persistent threats.
                     </p>
                     <p>
-                        My thesis research falls under the DoD-funded project 
-                        <em>"Resilience Engineering of ML-enabled Open World Recognition for Network Intrusion Detection Systems"</em> 
-                        (Grant W911NF-22-2-0160). My work centers on two core contributions: 
-                        <strong>MITRE ATT&CK-based attack chain prediction</strong> using hybrid LSTM-Markov models, and 
-                        <strong>Adversarial Risk Analysis (ARA-OSID)</strong>, a decision-theoretic framework with ATT&CK-derived 
-                        utility functions for defender-attacker scenarios in NIDS. My earlier research addressed what I call the 
-                        <strong>False Champion Problem</strong>: ML-based intrusion detection systems that achieve high aggregate accuracy 
-                        while failing catastrophically on critical attack classes. I've authored <strong>four first-author papers</strong> across these areas (1 accepted at DSN, 3 under review).
+                        I am finishing an M.S. in Data Science (thesis track) at UMass Dartmouth, where I have been a
+                        Graduate Research Assistant with <strong>Dr. Gokhan Kul</strong> on a Department of Defense
+                        funded project (Grant W911NF-22-2-0160) in collaboration with the U.S. Military Academy at
+                        West Point. My thesis, <em>"From Threat Intelligence to Decision Theory: Empirically Grounded
+                        Utility Functions for Adversarial Risk Analysis in Network Intrusion Detection,"</em> brings
+                        together two contributions: <strong>MITRE ATT&amp;CK attack chain prediction</strong> using
+                        hybrid LSTM-Markov models, and <strong>ARA-OSID</strong>, a decision-theoretic framework with
+                        ATT&amp;CK-derived utility functions for defender-attacker scenarios in open-set intrusion
+                        detection.
                     </p>
                     <p>
-                        Before graduate school, I spent 3+ years as a Data Scientist and Software Engineer building 
-                        production ML pipelines, time series models, and cloud-native services on AWS. I'm seeking 
-                        <strong>research scientist, ML engineer, and cybersecurity engineer</strong> roles where I can 
-                        apply both research depth and engineering skills. <strong>STEM OPT eligible with 3 years of U.S. work authorization.</strong>
+                        A common thread runs through this work. Detectors are usually evaluated as if the world were
+                        static and the attacker indifferent. Neither holds. My earlier work named the
+                        <strong>False Champion Problem</strong>: intrusion detection models that post excellent aggregate
+                        accuracy while failing on exactly the attack classes that matter. The decision-theoretic work
+                        that followed asks what a defender should actually do once that uncertainty is priced in.
+                        Provenance graphs are the natural next substrate for the same question, which is what draws me
+                        to the work at UIC.
                     </p>
-                    
+                    <p>
+                        Before graduate school I spent three years as a data scientist and software engineer building
+                        production ML pipelines and cloud services.
+                    </p>
+
                     <div class="research-interests">
                         <h3>Research Interests</h3>
                         <div class="interests-grid">
                             <div class="interest-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Adversarial Machine Learning</span>
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Provenance-based APT Detection</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-chess-knight"></i>
+                                <span>Adversarial Risk Analysis</span>
                             </div>
                             <div class="interest-item">
                                 <i class="fas fa-network-wired"></i>
-                                <span>Network Intrusion Detection</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-brain"></i>
-                                <span>Deep Learning Robustness</span>
+                                <span>Intrusion Detection</span>
                             </div>
                             <div class="interest-item">
                                 <i class="fas fa-chart-line"></i>
                                 <span>Cyber Threat Intelligence</span>
                             </div>
                             <div class="interest-item">
-                                <i class="fas fa-database"></i>
-                                <span>Synthetic Data Generation</span>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Adversarial Machine Learning</span>
                             </div>
                             <div class="interest-item">
                                 <i class="fas fa-lock"></i>
-                                <span>AI Security & Safety</span>
+                                <span>AI Security</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="about-stats" data-aos="fade-left">
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
                         <div class="stat-number">4</div>
-                        <div class="stat-label">First-Author Papers<br>(2 Accepted, 2 Under Review)</div>
+                        <div class="stat-label">First-author papers<br>2 peer-reviewed, 2 preprints</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="stat-number">DoD</div>
+                        <div class="stat-label">Funded research<br>Grant W911NF-22-2-0160<br>U.S. Military Academy</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-trophy"></i></div>
                         <div class="stat-number">1st</div>
-                        <div class="stat-label">NCAE Cyber Games<br>Northeast 2 Region (2026)</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-users"></i></div>
-                        <div class="stat-number">DoD</div>
-                        <div class="stat-label">Funded Research<br>(Grant W911NF-22-2-0160)<br>U.S. Military Academy</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-award"></i></div>
-                        <div class="stat-number">3.60</div>
-                        <div class="stat-label">GPA<br>Master's Program</div>
+                        <div class="stat-label">NCAE Cyber Games 2026<br>Northeast 2 region</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Students<br>Mentored</div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Program committees<br>and review assignments</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research & Publications Section -->
-    <section id="research" class="research-publications">
+    <!-- Publications Section -->
+    <section id="publications" class="research-publications">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Research & Publications</h2>
+            <h2 class="section-title" data-aos="fade-up">Publications</h2>
             <p class="section-subtitle" data-aos="fade-up">
-                DoD-Funded Project (Grant W911NF-22-2-0160) in collaboration with U.S. Military Academy at West Point<br>
-                <em style="font-size: 0.9em; opacity: 0.8;">Ordered chronologically &mdash; Papers 3 &amp; 4 (marked "Thesis Core") represent the primary thesis contributions</em>
+                First author on all. Supported by DoD Grant W911NF-22-2-0160, in collaboration with the U.S. Military Academy at West Point.<br>
+                <em style="font-size: 0.9em; opacity: 0.8;">Full list on <a href="https://scholar.google.com/citations?user=AtN6P1QAAAAJ" target="_blank" rel="noopener">Google Scholar</a></em>
             </p>
 
             <div class="publications-grid">
-                <!-- Publication 1 -->
-                <div class="publication-card" data-aos="fade-up">
+
+                <!-- SECRYPT 2026 -->
+                <div class="publication-card" data-aos="fade-up" style="border-left: 3px solid #10b981;">
                     <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
+                        <div class="pub-icon"><i class="fas fa-brain"></i></div>
                         <div class="pub-meta">
-                            <span class="pub-status">Under Review</span>
-                            <span class="pub-venue">IEEE Access</span>
+                            <span class="pub-status" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white;">Published</span>
+                            <span class="pub-venue">SECRYPT 2026</span>
                         </div>
                     </div>
-                    <h3 class="pub-title">Categorical Robustness Assessment and Model Evaluation for Machine Learning Based Network Intrusion Detection Systems</h3>
-                    <p class="pub-authors">Raj M, Bastian N.D, Kul G, Fiondella L.</p>
+                    <h3 class="pub-title">MITRE ATT&amp;CK-based Attack Chain Prediction Using Hybrid LSTM-Markov Models for Cyber Risk Assessment</h3>
+                    <p class="pub-authors">M. Raj, N. D. Bastian, G. Kul, L. Fiondella</p>
+                    <p class="pub-ids">Proc. SECRYPT 2026, vol. 2, pp. 1039&ndash;1050 &bull; doi:10.5220/0015075400004103</p>
                     <p class="pub-description">
-                        Designed and evaluated adversarial robustness framework for ML-based NIDS, achieving 93.97% baseline accuracy on 1.2M+ packet ACI-IoT-2023 dataset. Demonstrated up to 77% model performance degradation under FGSM/PGD attacks using CLEVER score analysis.
+                        Hybrid LSTM-Markov models for predicting attacker technique sequences, trained on 4,849 campaign
+                        chains from 33 documented campaigns and 8,437 real intrusion sequences. Reaches 86% next-step
+                        accuracy, and the resulting risk scores track NCISS at Pearson r = 0.76 and Spearman &rho; = 0.81.
                     </p>
                     <div class="pub-links">
-                        <a href="https://github.com/mayank02raj/Robustness-of-NIDS" target="_blank" class="pub-link">
+                        <a href="https://doi.org/10.5220/0015075400004103" target="_blank" rel="noopener" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> Paper
+                        </a>
+                        <a href="https://github.com/mayank02raj/MITRE-ATTACK-based-Attack-Chain-Prediction" target="_blank" rel="noopener" class="pub-link">
                             <i class="fab fa-github"></i> Code
                         </a>
-                        <a href="#" class="pub-link disabled" title="Paper link will be available upon publication">
-                            <i class="fas fa-file-pdf"></i> Paper (Coming Soon)
-                        </a>
-                        <a href="https://scholar.google.com" target="_blank" class="pub-link">
+                        <a href="https://scholar.google.com/citations?user=AtN6P1QAAAAJ" target="_blank" rel="noopener" class="pub-link">
                             <i class="fas fa-graduation-cap"></i> Scholar
                         </a>
                     </div>
+                    <details class="bibtex-block">
+                        <summary>BibTeX</summary>
+                        <div class="bibtex-wrap">
+                            <button class="bibtex-copy" type="button" onclick="mrCopyBib(this)">copy</button>
+<pre>@inproceedings{raj2026attackchain,
+  author    = {Raj, Mayank and Bastian, Nathaniel D. and
+               Kul, Gokhan and Fiondella, Lance},
+  title     = {{MITRE ATT\&CK}-based Attack Chain Prediction Using
+               Hybrid {LSTM}-Markov Models for Cyber Risk Assessment},
+  booktitle = {Proceedings of the International Conference on
+               Security and Cryptography (SECRYPT)},
+  volume    = {2},
+  pages     = {1039--1050},
+  year      = {2026},
+  publisher = {SCITEPRESS},
+  doi       = {10.5220/0015075400004103}
+}</pre>
+                        </div>
+                    </details>
                     <div class="pub-tags">
-                        <span class="tag">Adversarial ML</span>
-                        <span class="tag">NIDS</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Security</span>
+                        <span class="tag">MITRE ATT&amp;CK</span>
+                        <span class="tag">LSTM</span>
+                        <span class="tag">Threat Intelligence</span>
+                        <span class="tag">Risk Assessment</span>
                     </div>
                 </div>
 
-                <!-- Publication 2 -->
-                <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+                <!-- DSN-W 2026 -->
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="100" style="border-left: 3px solid #10b981;">
                     <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
+                        <div class="pub-icon"><i class="fas fa-chess-knight"></i></div>
                         <div class="pub-meta">
-                            <span class="pub-status">Under Review</span>
-                            <span class="pub-venue">IEEE Access</span>
+                            <span class="pub-status" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white;">Published</span>
+                            <span class="pub-venue">DSN-W 2026</span>
                         </div>
                     </div>
-                    <h3 class="pub-title">Synthetic Network Packet Generation through Statistical Learning and Genetic Algorithms</h3>
-                    <p class="pub-authors">Raj M, Bastian N.D, Kul G, Fiondella L.</p>
+                    <h3 class="pub-title">From Threat Intelligence to Decision Theory: ATT&amp;CK-Derived Utility Functions for Adversarial Risk Analysis in NIDS</h3>
+                    <p class="pub-authors">M. Raj, N. D. Bastian, G. Kul</p>
+                    <p class="pub-ids">IEEE/IFIP Int. Conf. on Dependable Systems and Networks Workshops (DSN-W) 2026 &bull; doi:10.1109/DSN-W70714.2026.00028</p>
                     <p class="pub-description">
-                        Developed novel synthetic IoT network packet generator combining statistical learning and genetic algorithms, validated through dual anomaly detection achieving <1.2% anomaly rate. Enables privacy-preserving dataset generation for cybersecurity research.
+                        A formal adversarial risk analysis framework whose utility functions are derived from ATT&amp;CK
+                        rather than assumed, integrating EPSS and KEV vulnerability signals into game-theoretic
+                        defender-attacker models for intrusion detection.
                     </p>
+                    <p class="pub-note">Thesis core. An extended journal version is in preparation.</p>
                     <div class="pub-links">
-                        <a href="https://github.com/mayank02raj/Synthetic-Network-Packet-Generation" target="_blank" class="pub-link">
+                        <a href="https://doi.org/10.1109/DSN-W70714.2026.00028" target="_blank" rel="noopener" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> Paper
+                        </a>
+                        <a href="https://github.com/mayank02raj" target="_blank" rel="noopener" class="pub-link">
                             <i class="fab fa-github"></i> Code
                         </a>
-                        <a href="#" class="pub-link disabled" title="Paper link will be available upon publication">
-                            <i class="fas fa-file-pdf"></i> Paper (Coming Soon)
-                        </a>
-                        <a href="https://scholar.google.com" target="_blank" class="pub-link">
+                        <a href="https://scholar.google.com/citations?user=AtN6P1QAAAAJ" target="_blank" rel="noopener" class="pub-link">
                             <i class="fas fa-graduation-cap"></i> Scholar
                         </a>
                     </div>
+                    <details class="bibtex-block">
+                        <summary>BibTeX</summary>
+                        <div class="bibtex-wrap">
+                            <button class="bibtex-copy" type="button" onclick="mrCopyBib(this)">copy</button>
+<pre>@inproceedings{raj2026araosid,
+  author    = {Raj, Mayank and Bastian, Nathaniel D. and Kul, Gokhan},
+  title     = {From Threat Intelligence to Decision Theory:
+               {ATT\&CK}-Derived Utility Functions for Adversarial
+               Risk Analysis in {NIDS}},
+  booktitle = {IEEE/IFIP International Conference on Dependable
+               Systems and Networks Workshops (DSN-W)},
+  year      = {2026},
+  publisher = {IEEE},
+  doi       = {10.1109/DSN-W70714.2026.00028}
+}</pre>
+                        </div>
+                    </details>
+                    <div class="pub-tags">
+                        <span class="tag">Adversarial Risk Analysis</span>
+                        <span class="tag">Decision Theory</span>
+                        <span class="tag">Game Theory</span>
+                        <span class="tag">MITRE ATT&amp;CK</span>
+                    </div>
+                </div>
+
+                <!-- arXiv: synthetic packets -->
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pub-header">
+                        <div class="pub-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="pub-meta">
+                            <span class="pub-status">Preprint</span>
+                            <span class="pub-venue">arXiv</span>
+                        </div>
+                    </div>
+                    <h3 class="pub-title">Synthetic Network Packet Generation through Statistical Learning and Genetic Algorithms</h3>
+                    <p class="pub-authors">M. Raj, N. D. Bastian, G. Kul, L. Fiondella</p>
+                    <p class="pub-ids">arXiv:2606.20864 &bull; doi:10.48550/arXiv.2606.20864</p>
+                    <p class="pub-description">
+                        A synthetic IoT packet generator combining statistical learning with genetic algorithms,
+                        validated by dual anomaly detection at under 1.2% anomaly rate. Intended for building
+                        shareable datasets without exposing real traffic.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2606.20864" target="_blank" rel="noopener" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> arXiv
+                        </a>
+                        <a href="https://github.com/mayank02raj/Synthetic-Network-Packet-Generation" target="_blank" rel="noopener" class="pub-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                    <details class="bibtex-block">
+                        <summary>BibTeX</summary>
+                        <div class="bibtex-wrap">
+                            <button class="bibtex-copy" type="button" onclick="mrCopyBib(this)">copy</button>
+<pre>@misc{raj2026synthetic,
+  author        = {Raj, Mayank and Bastian, Nathaniel D. and
+                   Kul, Gokhan and Fiondella, Lance},
+  title         = {Synthetic Network Packet Generation through
+                   Statistical Learning and Genetic Algorithms},
+  year          = {2026},
+  eprint        = {2606.20864},
+  archivePrefix = {arXiv},
+  doi           = {10.48550/arXiv.2606.20864}
+}</pre>
+                        </div>
+                    </details>
                     <div class="pub-tags">
                         <span class="tag">Synthetic Data</span>
                         <span class="tag">Genetic Algorithms</span>
@@ -298,1050 +524,420 @@
                     </div>
                 </div>
 
-                <!-- Publication 3 - ACCEPTED -->
-                <div class="publication-card" data-aos="fade-up" data-aos-delay="200" style="border-left: 3px solid #10b981;">
+                <!-- arXiv: robustness -->
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
+                        <div class="pub-icon"><i class="fas fa-shield-alt"></i></div>
                         <div class="pub-meta">
-                            <span class="pub-status" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white;">Accepted</span>
-                            <span class="pub-venue">SECRYPT 2026</span>
+                            <span class="pub-status">Preprint</span>
+                            <span class="pub-venue">arXiv</span>
                         </div>
                     </div>
-                    <h3 class="pub-title">MITRE ATT&CK-based Attack Chain Prediction using Hybrid LSTM-Markov Models for Cybersecurity Risk Assessment</h3>
-                    <p class="pub-authors">Raj M, Bastian N.D, Kul G, Fiondella L.</p>
+                    <h3 class="pub-title">Categorical Robustness Assessment and Model Evaluation for Machine Learning Based Network Intrusion Detection Systems</h3>
+                    <p class="pub-authors">M. Raj, N. D. Bastian, G. Kul, L. Fiondella</p>
+                    <p class="pub-ids">arXiv:2606.12075 &bull; doi:10.48550/arXiv.2606.12075</p>
                     <p class="pub-description">
-                        Engineered hybrid LSTM-Markov models for MITRE ATT&CK-based attack chain prediction with integrated probabilistic risk scoring framework. Enables proactive threat intelligence and security posture assessment.
+                        The False Champion Problem, measured. A per-class robustness framework for ML-based NIDS on the
+                        1.2M-packet ACI-IoT-2023 dataset: 93.97% baseline accuracy collapses by up to 77% under FGSM and
+                        PGD, with CLEVER score analysis showing the aggregate number hides where the failures land.
                     </p>
                     <div class="pub-links">
-                        <a href="https://github.com/mayank02raj/MITRE-ATTACK-based-Attack-Chain-Prediction" target="_blank" class="pub-link">
+                        <a href="https://arxiv.org/abs/2606.12075" target="_blank" rel="noopener" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> arXiv
+                        </a>
+                        <a href="https://github.com/mayank02raj/Robustness-of-NIDS" target="_blank" rel="noopener" class="pub-link">
                             <i class="fab fa-github"></i> Code
                         </a>
-                        <a href="#" class="pub-link disabled" title="Paper link will be available upon publication">
-                            <i class="fas fa-file-pdf"></i> Paper (Coming Soon)
-                        </a>
-                        <a href="https://scholar.google.com" target="_blank" class="pub-link">
-                            <i class="fas fa-graduation-cap"></i> Scholar
-                        </a>
                     </div>
+                    <details class="bibtex-block">
+                        <summary>BibTeX</summary>
+                        <div class="bibtex-wrap">
+                            <button class="bibtex-copy" type="button" onclick="mrCopyBib(this)">copy</button>
+<pre>@misc{raj2026robustness,
+  author        = {Raj, Mayank and Bastian, Nathaniel D. and
+                   Kul, Gokhan and Fiondella, Lance},
+  title         = {Categorical Robustness Assessment and Model
+                   Evaluation for Machine Learning Based Network
+                   Intrusion Detection Systems},
+  year          = {2026},
+  eprint        = {2606.12075},
+  archivePrefix = {arXiv},
+  doi           = {10.48550/arXiv.2606.12075}
+}</pre>
+                        </div>
+                    </details>
                     <div class="pub-tags">
-                        <span class="tag">MITRE ATT&CK</span>
-                        <span class="tag">LSTM</span>
-                        <span class="tag">Threat Intelligence</span>
-                        <span class="tag">Risk Assessment</span>
+                        <span class="tag">Adversarial ML</span>
+                        <span class="tag">NIDS</span>
+                        <span class="tag">Robustness</span>
+                        <span class="tag">Evaluation</span>
                     </div>
                 </div>
 
-                <!-- Publication 4 - ACCEPTED -->
-                <div class="publication-card" data-aos="fade-up" data-aos-delay="300" style="border-left: 3px solid #10b981;">
-                    <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-chess-knight"></i>
-                        </div>
-                        <div class="pub-meta">
-                            <span class="pub-status" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white;">Accepted</span>
-                            <span class="pub-venue">DSN 2026 Workshop</span>
-                        </div>
-                    </div>
-                    <h3 class="pub-title">From Threat Intelligence to Decision Theory: ATT&CK-Derived Utility Functions for Adversarial Risk Analysis in NIDS</h3>
-                    <p class="pub-authors">Raj M, Bastian N.D, Kul G.</p>
-                    <p class="pub-description">
-                        Developed a formal Adversarial Risk Analysis framework with ATT&CK-derived utility functions 
-                        for network intrusion detection, integrating EPSS/KEV vulnerability data with game-theoretic 
-                        decision models for defender-attacker scenarios.
-                    </p>
-                    <div class="pub-links">
-                        <a href="https://github.com/mayank02raj" target="_blank" class="pub-link">
-                            <i class="fab fa-github"></i> Code
-                        </a>
-                        <a href="#" class="pub-link disabled" title="Paper link will be available upon publication">
-                            <i class="fas fa-file-pdf"></i> Paper (Coming Soon)
-                        </a>
-                    </div>
-                    <div class="pub-tags">
-                        <span class="tag">Adversarial Risk Analysis</span>
-                        <span class="tag">Decision Theory</span>
-                        <span class="tag">Game Theory</span>
-                        <span class="tag">MITRE ATT&CK</span>
-                    </div>
-                </div>
             </div>
-
-
         </div>
     </section>
 
-    <!-- Scholar Services Section -->
-    <section id="scholar-services" class="scholar-services-section">
+    <!-- Service Section -->
+    <section id="service" class="scholar-services-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Scholar Services</h2>
-            <p class="section-subtitle" data-aos="fade-up">Contributing to the academic community through peer review</p>
-            
+            <h2 class="section-title" data-aos="fade-up">Service</h2>
+
             <div class="scholar-services-content" data-aos="fade-up">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-user-graduate"></i></div>
                     <div class="service-details">
-                        <h3>Conference Reviewer</h3>
+                        <h3>Reviewer</h3>
                         <div class="service-item">
                             <div class="service-title">
                                 <i class="fas fa-check-circle"></i>
-                                <strong>IEEE MILCOM 2025 (W07)</strong>
+                                <strong>IEEE MILCOM 2026, Unclassified Track 5</strong>
                             </div>
                             <p class="service-description">
-                                Peer reviewer for IEEE Military Communications Conference 2025, evaluating submissions in cybersecurity, machine learning, and network security domains.
+                                AI/ML for Communication and Networking.
                             </p>
-                            <span class="service-date"><i class="far fa-calendar"></i> August 2025</span>
+                            <span class="service-date"><i class="far fa-calendar"></i> 2026</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-title">
+                                <i class="fas fa-check-circle"></i>
+                                <strong>IEEE MILCOM 2025, Workshop 07</strong>
+                            </div>
+                            <p class="service-description">
+                                External reviewer, 2nd Workshop on Security, Resilience, and Robustness of Systems and Software.
+                            </p>
+                            <span class="service-date"><i class="far fa-calendar"></i> 2025</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-users-cog"></i></div>
                     <div class="service-details">
                         <h3>Technical Program Committee</h3>
                         <div class="service-item">
                             <div class="service-title">
                                 <i class="fas fa-check-circle"></i>
-                                <strong>DSN Workshop on Dependable and Secure Autonomous Systems: Space and Drone Technologies in the Age of AI 2026 </strong>
+                                <strong>DSN 2026 Workshop on Dependable and Secure Autonomous Systems</strong>
                             </div>
                             <p class="service-description">
-                                Technical Program Committee member for the Workshop on "Dependable and Secure Autonomous Systems: Space and Drone Technologies in the Age of AI", co-located with the 56th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2026), Charlotte, USA, June 2026.
+                                Space and Drone Technologies in the Age of AI, co-located with the 56th IEEE/IFIP
+                                International Conference on Dependable Systems and Networks, Charlotte, June 2026.
                             </p>
                             <span class="service-date"><i class="far fa-calendar"></i> June 2026</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience & Teaching -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Experience</h2>
-            
-            <div class="timeline">
-                <!-- Research Assistant -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jan 2025 - Present</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Research Assistant</h3>
-                            <h4>University of Massachusetts Dartmouth</h4>
-                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
-                        </div>
-                        <p class="timeline-subtitle">Department of Defense-Funded Project (Grant W911NF-22-2-0160) | Advisor: Dr. Gokhan Kul</p>
-                        <ul class="timeline-list">
-                            <li>Designed and evaluated adversarial robustness framework for ML-based Network Intrusion Detection Systems, achieving 93.97% baseline accuracy on 1.2M+ packet ACI-IoT-2023 dataset</li>
-                            <li>Demonstrated up to 77% model performance degradation under FGSM/PGD attacks using CLEVER score analysis</li>
-                            <li>Developed novel synthetic IoT network packet generator combining statistical learning and genetic algorithms</li>
-                            <li>Engineered hybrid LSTM-Markov models for MITRE ATT&CK-based attack chain prediction</li>
-                            <li>Collaborated with military researchers on national security applications; presented findings at research meetings</li>
-                            <li>Reviewer at IEEE MILCOM WS-07: Security, Resilient, and Robustness of Systems and Software 2025</li>
-                            <li>Technical Program Committee Member for DSN Workshop: Dependable and Secure Autonomous Systems: Space and Drone Technologies in the Age of AI 2026</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Adversarial ML</span>
-                            <span class="tag">NIDS</span>
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">MITRE ATT&CK</span>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="section-title" data-aos="fade-up">Experience &amp; Teaching</h2>
+            <p class="section-subtitle" data-aos="fade-up">Full detail in the <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>.</p>
 
-                <!-- Graduate TA - Database Design -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Sept 2025 - Present</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Graduate Teaching Assistant - Database Design (CIS-552)</h3>
-                            <h4>University of Massachusetts Dartmouth</h4>
-                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Mentored 50+ graduate students in advanced database systems, focusing on relational algebra, query optimization, and AI-driven architectures</li>
-                            <li>Delivered instruction on vector databases, learned query optimization, ML-based cost estimation, and distributed/NoSQL systems</li>
-                            <li>Guided projects on ER modeling, schema optimization, indexing strategies, and recovery protocols</li>
-                            <li>Integrated emerging database technologies (feature stores, data lakehouses, AI-native consistency models) into coursework</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Database Systems</span>
-                            <span class="tag">Teaching</span>
-                            <span class="tag">AI Integration</span>
-                        </div>
+            <ul class="role-list" data-aos="fade-up">
+                <li class="role-item">
+                    <div class="role-when">Jan 2025 &ndash; Aug 2026</div>
+                    <div class="role-what">
+                        <h4>Graduate Research Assistant</h4>
+                        <p class="role-org">UMass Dartmouth &bull; advised by Dr. Gokhan Kul</p>
+                        <p class="role-detail">
+                            DoD Grant W911NF-22-2-0160, with the U.S. Military Academy at West Point. Attack chain
+                            prediction, adversarial risk analysis, per-class robustness evaluation for ML-based
+                            intrusion detection, and synthetic packet generation.
+                        </p>
                     </div>
-                </div>
-
-                <!-- Research Technician -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2024 - Aug 2024</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Research Technician/Digitizer</h3>
-                            <h4>School of Marine Science and Technology - UMass Dartmouth</h4>
-                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
-                        </div>
-                        <p class="timeline-subtitle">Stokesbury Lab</p>
-                        <ul class="timeline-list">
-                            <li>Participated in oceanographic field expeditions operating specialized seafloor mapping equipment (HabCam, video survey systems)</li>
-                            <li>Developed automated data processing pipelines analyzing terabytes of seafloor imagery using machine learning and computer vision</li>
-                            <li>Performed quantitative spatial analysis with geospatial tools (GeoPandas, QGIS) to evaluate environmental factors</li>
-                            <li>Contributed computational expertise to data-driven fisheries management strategies</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Geospatial Analysis</span>
-                        </div>
+                </li>
+                <li class="role-item">
+                    <div class="role-when">Sept 2025 &ndash; May 2026</div>
+                    <div class="role-what">
+                        <h4>Teaching Assistant, Database Design (CIS-552)</h4>
+                        <p class="role-org">UMass Dartmouth</p>
+                        <p class="role-detail">
+                            Graduate course. Relational algebra, query optimization, indexing and recovery, plus
+                            vector databases, learned query optimization, and distributed and NoSQL systems.
+                        </p>
                     </div>
-                </div>
-
-                <!-- Graduate TA - Programming -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Sept 2024 - Dec 2024</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Graduate Teaching Assistant - Procedural Programming (CIS-190)</h3>
-                            <h4>University of Massachusetts Dartmouth</h4>
-                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dartmouth, MA</p>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Led hands-on lab sessions for 30+ undergraduate students in C/C++ programming, debugging techniques, and code optimization</li>
-                            <li>Developed and presented instructional materials on data structures, memory management, pointers, and file I/O operations</li>
-                            <li>Fostered algorithmic thinking and problem-solving skills through structured exercises and real-world programming challenges</li>
-                            <li>Provided individualized mentoring during office hours, guiding students through complex programming concepts</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">C/C++</span>
-                            <span class="tag">Teaching</span>
-                            <span class="tag">Mentoring</span>
-                        </div>
+                </li>
+                <li class="role-item">
+                    <div class="role-when">Sept 2024 &ndash; Dec 2024</div>
+                    <div class="role-what">
+                        <h4>Teaching Assistant, Procedural Programming (CIS-190)</h4>
+                        <p class="role-org">UMass Dartmouth</p>
+                        <p class="role-detail">
+                            Undergraduate C/C++ labs: data structures, memory management, pointers, and file I/O.
+                        </p>
                     </div>
-                </div>
-
-
-                <!-- Data Scientist -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jan 2020 - Apr 2023</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Data Scientist</h3>
-                            <h4>Eklavya Estate Private Limited</h4>
-                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Architected ETL pipelines processing 500K+ real estate records with 99.7% accuracy through automated validation protocols</li>
-                            <li>Developed time series models (ARIMA, LSTM) for housing price prediction across 15+ markets with monthly executive reporting</li>
-                            <li>Applied ML techniques (Random Forest, XGBoost) to customer analysis, improving prediction accuracy by 18% and reducing loss ratio by 12%</li>
-                            <li>Enhanced trend analysis efficiency by 15% using automated data mining, NLP, and interactive dashboards (Tableau, Power BI)</li>
-                            <li>Implemented A/B testing and hypothesis testing for pricing strategies, informing $2M+ annual revenue decisions</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Time Series</span>
-                            <span class="tag">Data Analytics</span>
-                            <span class="tag">ETL</span>
-                        </div>
+                </li>
+                <li class="role-item">
+                    <div class="role-when">May 2024 &ndash; Aug 2024</div>
+                    <div class="role-what">
+                        <h4>Research Technician</h4>
+                        <p class="role-org">School of Marine Science and Technology, UMass Dartmouth &bull; Stokesbury Lab</p>
+                        <p class="role-detail">
+                            Seafloor imagery pipelines at terabyte scale using computer vision, with spatial analysis
+                            in GeoPandas and QGIS for fisheries management.
+                        </p>
                     </div>
-                </div>
-
-                <!-- Software Engineer -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Sept 2019 - Jan 2020</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Software Engineer</h3>
-                            <h4>Eklavya Estate Private Limited</h4>
-                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Designed RESTful APIs using Django and Flask to integrate legacy systems with cloud infrastructure</li>
-                            <li>Architected AWS microservices (EC2, S3, RDS, Lambda) supporting 10K+ concurrent users with load balancing and auto-scaling</li>
-                            <li>Containerized applications using Docker and Kubernetes, reducing deployment time by 60%</li>
-                            <li>Developed secure file transfer dashboard with end-to-end encryption for automated local-to-remote synchronization</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Django</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Kubernetes</span>
-                        </div>
+                </li>
+                <li class="role-item">
+                    <div class="role-when">2019 &ndash; 2023</div>
+                    <div class="role-what">
+                        <h4>Data Scientist, then Software Engineer</h4>
+                        <p class="role-org">Eklavya Estate Private Limited &bull; Bengaluru, India</p>
+                        <p class="role-detail">
+                            ETL pipelines over 500K+ records, time series forecasting across 15+ markets, and AWS
+                            microservices serving 10K+ concurrent users.
+                        </p>
                     </div>
-                </div>
-
-                <!-- Internship -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Apr 2016 - Aug 2016</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Internship</h3>
-                            <h4>Hindustan Aeronautics Limited (HAL)</h4>
-                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Applied ML algorithms with pneumatic control systems for automated testing of GSLV Mk 3 and PSLV Mk 2 rocket systems</li>
-                            <li>Developed ML-powered quality control dashboards for production monitoring of fighter jets (Su-30MKI, Tejas) and combat helicopters (Apache, LCH)</li>
-                            <li>Gained experience in industrial automation, control systems, and real-time data processing for mission-critical defense applications</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Industrial Automation</span>
-                            <span class="tag">Defense</span>
-                        </div>
+                </li>
+                <li class="role-item">
+                    <div class="role-when">2016</div>
+                    <div class="role-what">
+                        <h4>Intern</h4>
+                        <p class="role-org">Hindustan Aeronautics Limited &bull; Bengaluru, India</p>
+                        <p class="role-detail">
+                            Automated test and quality-control tooling for aerospace production systems.
+                        </p>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <!-- Awards & Achievements Section -->
+    <!-- Awards -->
     <section id="awards" class="projects">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Awards & Achievements</h2>
+            <h2 class="section-title" data-aos="fade-up">Awards</h2>
 
             <div class="projects-grid">
-                <!-- NCAE Cyber Games -->
                 <div class="project-card" data-aos="fade-up">
-                    <div class="project-icon">
-                        <i class="fas fa-trophy" style="color: #f59e0b;"></i>
-                    </div>
-                    <h3>1st Place - NCAE Cyber Games 2026</h3>
+                    <div class="project-icon"><i class="fas fa-trophy" style="color: #f59e0b;"></i></div>
+                    <h3>NCAE Cyber Games 2026, 1st place</h3>
                     <p class="project-description">
-                        Won 1st place in the 2026 NCAE Cyber Games (Northeast 2 Region) as a UMass Dartmouth team member, achieving the highest overall score among all competing teams nationally. Competed in SOC analysis, Splunk and Corelight log queries, MITRE ATT&CK Navigator exercises, and live Linux/Windows server administration under attack.
+                        First place in the Northeast 2 region against 140+ competing teams, as part of the UMass
+                        Dartmouth team. SOC analysis, Splunk and Corelight log queries, ATT&amp;CK Navigator exercises,
+                        and live Linux and Windows administration under active attack.
                     </p>
                     <div class="project-tags">
                         <span class="tag">SOC Analysis</span>
                         <span class="tag">Splunk</span>
-                        <span class="tag">MITRE ATT&CK</span>
                         <span class="tag">Blue Team</span>
                     </div>
                 </div>
 
-                <!-- OWASP CTF -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-icon">
-                        <i class="fas fa-flag" style="color: #ef4444;"></i>
-                    </div>
-                    <h3>OWASP Juice Shop CTF Organizer</h3>
+                    <div class="project-icon"><i class="fas fa-flag" style="color: #ef4444;"></i></div>
+                    <h3>OWASP Juice Shop CTF, organizer</h3>
                     <p class="project-description">
-                        Organized and led the OWASP Juice Shop Capture The Flag competition for the UMass Dartmouth Cybersecurity and Computing Club. Designed challenge scenarios covering SQL injection, XSS, authentication bypass, and other OWASP Top 10 vulnerabilities.
+                        Designed and ran the CTF for the UMass Dartmouth Cybersecurity and Computing Club, with
+                        challenges spanning SQL injection, XSS, authentication bypass, and the rest of the OWASP Top 10.
                     </p>
                     <div class="project-tags">
                         <span class="tag">CTF</span>
                         <span class="tag">OWASP</span>
-                        <span class="tag">Penetration Testing</span>
                         <span class="tag">Leadership</span>
-                    </div>
-                </div>
-
-                <!-- IEEE Membership & Service -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-icon">
-                        <i class="fas fa-award" style="color: #3b82f6;"></i>
-                    </div>
-                    <h3>IEEE Communications Society Member</h3>
-                    <p class="project-description">
-                        Active member of IEEE Communications Society. Served as peer reviewer for IEEE MILCOM 2025 and Technical Program Committee member for the DSN 2026 Workshop on Dependable and Secure Autonomous Systems.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">IEEE</span>
-                        <span class="tag">Peer Review</span>
-                        <span class="tag">TPC Member</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Open Source Research Section -->
+    <!-- Projects -->
     <section id="projects" class="projects" style="padding-top: 2rem;">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Open Source & Projects</h2>
+            <h2 class="section-title" data-aos="fade-up">Selected Projects</h2>
             <p class="section-subtitle" data-aos="fade-up">
-                Research repositories, cybersecurity tools, and data science projects on GitHub
+                Tools built outside the papers. Code for the published work is linked from each publication above.
             </p>
-
-            <!-- Subsection: Security & Detection -->
-            <h3 data-aos="fade-up" style="margin: 2rem 0 1rem; font-size: 1.2rem; opacity: 0.85;">
-                <i class="fas fa-shield-alt" style="color: var(--primary-color); margin-right: 0.5rem;"></i>Security & Detection
-            </h3>
 
             <div class="projects-grid">
                 <div class="project-card" data-aos="fade-up">
-                    <div class="project-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Adversarial Robustness of NIDS</h3>
-                    <p class="project-description">
-                        Framework for evaluating ML-based Network Intrusion Detection Systems against FGSM/PGD adversarial attacks with CLEVER score analysis. ACI-IoT-2023 dataset, 1.2M+ packets.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/Robustness-of-NIDS" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Adversarial ML</span>
-                        <span class="tag">NIDS</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Synthetic Network Packet Generator</h3>
-                    <p class="project-description">
-                        Novel IoT packet generation combining statistical learning and genetic algorithms. Dual anomaly detection validation with &lt;1.2% anomaly rate for privacy-preserving cybersecurity research.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/Synthetic-Network-Packet-Generation" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Genetic Algorithms</span>
-                        <span class="tag">IoT</span>
-                        <span class="tag">Synthetic Data</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>MITRE ATT&CK Attack Chain Prediction</h3>
-                    <p class="project-description">
-                        Hybrid LSTM-Markov models for predicting attacker behavior sequences using MITRE ATT&CK tactics and techniques, with integrated probabilistic risk scoring.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/MITRE-ATTACK-based-Attack-Chain-Prediction" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">LSTM</span>
-                        <span class="tag">MITRE ATT&CK</span>
-                        <span class="tag">Risk Scoring</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-icon">
-                        <i class="fas fa-desktop" style="color: #10b981;"></i>
-                    </div>
+                    <div class="project-icon"><i class="fas fa-desktop" style="color: #10b981;"></i></div>
                     <h3>SOC Home Lab</h3>
                     <p class="project-description">
-                        11-service Dockerized SOC with Wazuh, Suricata, TheHive, Cortex, Grafana. 9 authored Sigma rules with pytest CI, custom Sigma-to-Wazuh compiler, 8-stage MITRE ATT&CK adversary emulation covering 91.3% of the kill chain.
+                        11-service Dockerized SOC with Wazuh, Suricata, TheHive, Cortex, and Grafana. 9 authored Sigma
+                        rules under pytest CI, a custom Sigma-to-Wazuh compiler, and an 8-stage ATT&amp;CK adversary
+                        emulation covering 91.3% of the kill chain.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/mayank02raj/SOC-home-lab" target="_blank" class="project-link">
+                        <a href="https://github.com/mayank02raj/SOC-home-lab" target="_blank" rel="noopener" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
                     <div class="project-tags">
-                        <span class="tag">SOC</span>
                         <span class="tag">SIEM</span>
-                        <span class="tag">Blue Team</span>
+                        <span class="tag">Sigma</span>
                         <span class="tag">Detection Engineering</span>
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-icon">
-                        <i class="fas fa-th" style="color: #8b5cf6;"></i>
-                    </div>
-                    <h3>MITRE ATT&CK Coverage Dashboard</h3>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-icon"><i class="fas fa-th" style="color: #8b5cf6;"></i></div>
+                    <h3>ATT&amp;CK Coverage Dashboard</h3>
                     <p class="project-description">
-                        7-page Streamlit analytics over MITRE ATT&CK coverage. Ingests Sigma, Wazuh-XML, and JSON rules. Data-source-weighted coverage across 130+ threat actors. Exports ATT&CK Navigator JSON + PDF reports.
+                        Streamlit analytics over detection coverage. Ingests Sigma, Wazuh XML, and JSON rules, computes
+                        data-source-weighted coverage across 130+ threat actors, and exports ATT&amp;CK Navigator JSON
+                        and PDF reports.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/mayank02raj/ATTACK-Coverage-Dashboard" target="_blank" class="project-link">
+                        <a href="https://github.com/mayank02raj/ATTACK-Coverage-Dashboard" target="_blank" rel="noopener" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
                     <div class="project-tags">
-                        <span class="tag">MITRE ATT&CK</span>
+                        <span class="tag">MITRE ATT&amp;CK</span>
                         <span class="tag">Streamlit</span>
                         <span class="tag">Threat Coverage</span>
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-icon">
-                        <i class="fas fa-fish" style="color: #ef4444;"></i>
-                    </div>
-                    <h3>Phishing URL Detector</h3>
-                    <p class="project-description">
-                        XGBoost on 42 engineered features + CharCNN on raw URL characters. Per-request SHAP explanations, PSI drift monitoring, Prometheus metrics. ~97% accuracy at &lt;1ms CPU inference. FastAPI + Docker.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/Phishing-URL-Detector" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">XGBoost</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">SHAP</span>
-                        <span class="tag">Phishing Detection</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-icon">
-                        <i class="fas fa-chart-area" style="color: #3b82f6;"></i>
-                    </div>
-                    <h3>Network Traffic Anomaly Visualizer</h3>
-                    <p class="project-description">
-                        Packet capture with Z-score/IQR anomaly detection. Per-source port scan detection via Shannon entropy. Interactive Plotly HTML dashboards. Streaming mode for long captures.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/network-traffic-anomaly-visualizer" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Scapy</span>
-                        <span class="tag">Plotly</span>
-                        <span class="tag">Anomaly Detection</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                    <div class="project-icon">
-                        <i class="fas fa-bug" style="color: #f59e0b;"></i>
-                    </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-icon"><i class="fas fa-bug" style="color: #f59e0b;"></i></div>
                     <h3>Honeypot Attack Classifier</h3>
                     <p class="project-description">
-                        SSH/HTTP/FTP honeypot using paramiko with Random Forest session classification. Thread-safe rate limiting, webhook alerting, and real-time Flask dashboard. Docker Compose deployment.
+                        SSH, HTTP, and FTP honeypot built on paramiko with random forest session classification.
+                        Thread-safe rate limiting, webhook alerting, and a live Flask dashboard.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/mayank02raj/honeypot-attack-classifier" target="_blank" class="project-link">
+                        <a href="https://github.com/mayank02raj/honeypot-attack-classifier" target="_blank" rel="noopener" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
                     <div class="project-tags">
-                        <span class="tag">Paramiko</span>
+                        <span class="tag">Honeypot</span>
                         <span class="tag">Random Forest</span>
                         <span class="tag">Flask</span>
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                    <div class="project-icon">
-                        <i class="fas fa-cloud" style="color: #10b981;"></i>
-                    </div>
-                    <h3>Cloud Security Auditor</h3>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-icon"><i class="fas fa-fish" style="color: #ef4444;"></i></div>
+                    <h3>Phishing URL Detector</h3>
                     <p class="project-description">
-                        AWS security scanner across 6 service areas (S3, IAM, SG, EC2, RDS, CloudTrail) against CIS benchmarks. Multi-region scanning with retry/backoff. HTML + JSON reports. CI-friendly exit codes.
+                        XGBoost over 42 engineered features alongside a CharCNN on raw URL characters. Per-request SHAP
+                        explanations, PSI drift monitoring, Prometheus metrics. ~97% accuracy at sub-millisecond CPU
+                        inference.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/mayank02raj/cloud-security-auditor" target="_blank" class="project-link">
+                        <a href="https://github.com/mayank02raj/Phishing-URL-Detector" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">SHAP</span>
+                        <span class="tag">FastAPI</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-icon"><i class="fas fa-robot" style="color: #8b5cf6;"></i></div>
+                    <h3>LLM Hallucination Detector</h3>
+                    <p class="project-description">
+                        Scores model outputs against source documents on semantic similarity, entity overlap, and
+                        numerical accuracy with bootstrap confidence intervals. Detects positional, verbosity, and
+                        self-enhancement bias in LLM-as-judge setups, with ECE and MCE calibration curves.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/mayank02raj/llm-hallucination-detector" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">LLM Evaluation</span>
+                        <span class="tag">Calibration</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-icon"><i class="fas fa-cloud" style="color: #10b981;"></i></div>
+                    <h3>Cloud Security Auditor</h3>
+                    <p class="project-description">
+                        AWS scanner across S3, IAM, security groups, EC2, RDS, and CloudTrail against CIS benchmarks.
+                        Multi-region with retry and backoff, HTML and JSON reports, CI-friendly exit codes.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/mayank02raj/cloud-security-auditor" target="_blank" rel="noopener" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
                     <div class="project-tags">
                         <span class="tag">AWS</span>
-                        <span class="tag">Boto3</span>
                         <span class="tag">CIS Benchmarks</span>
+                        <span class="tag">Boto3</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Subsection: ML / Data Science -->
-            <h3 data-aos="fade-up" style="margin: 2.5rem 0 1rem; font-size: 1.2rem; opacity: 0.85;">
-                <i class="fas fa-brain" style="color: var(--primary-color); margin-right: 0.5rem;"></i>ML / Data Science
-            </h3>
-
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
-                    <div class="project-icon">
-                        <i class="fas fa-robot" style="color: #8b5cf6;"></i>
-                    </div>
-                    <h3>LLM Hallucination Detector</h3>
-                    <p class="project-description">
-                        Factual grounding checker scoring LLM outputs against source documents via semantic similarity, entity overlap, and numerical accuracy with bootstrap CIs. LLM-as-judge bias detection (positional, verbosity, self-enhancement). Calibration curves with ECE/MCE. FastAPI server + Streamlit dashboard.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/llm-hallucination-detector" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">LLM</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">Evaluation</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-icon">
-                        <i class="fas fa-flask" style="color: #10b981;"></i>
-                    </div>
-                    <h3>Adaptive Experimentation Engine</h3>
-                    <p class="project-description">
-                        Experimentation platform with A/B tests using O'Brien-Fleming sequential monitoring, Thompson Sampling multi-armed bandits (Beta-Bernoulli), and contextual bandits (online logistic regression). Simulation engine comparing cumulative regret. FastAPI assignment server with file-backed persistence.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/adaptive-experimentation-engine" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">A/B Testing</span>
-                        <span class="tag">Bandits</span>
-                        <span class="tag">Statistics</span>
-                        <span class="tag">FastAPI</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-icon">
-                        <i class="fas fa-chart-line" style="color: #3b82f6;"></i>
-                    </div>
-                    <h3>Time-Series Foundation Model Benchmark</h3>
-                    <p class="project-description">
-                        Benchmarking harness comparing classical methods (ARIMA, LSTM with early stopping + val split, XGBoost with lag features + cyclical encoding) against time-series foundation models (Chronos). Evaluates point accuracy, computational cost, and few-shot learning curves at varying context lengths.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mayank02raj/ts-foundation-benchmark" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Time Series</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Chronos</span>
-                        <span class="tag">Benchmarking</span>
-                    </div>
-                </div>
-            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                More on <a href="https://github.com/mayank02raj" target="_blank" rel="noopener">GitHub</a>.
+            </p>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Skills & Languages</h2>
-            
+            <h2 class="section-title" data-aos="fade-up">Tools</h2>
+
             <div class="skills-container">
-                <!-- Programming & Scripting -->
                 <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-code"></i> Programming & Scripting</h3>
+                    <h3><i class="fas fa-code"></i> Languages</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-r-project"></i>
-                            <span>R</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-terminal"></i>
-                            <span>Bash</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>C/C++</span>
-                        </div>
+                        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="skill-item"><i class="fas fa-code"></i><span>C/C++</span></div>
+                        <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                        <div class="skill-item"><i class="fas fa-terminal"></i><span>Bash</span></div>
+                        <div class="skill-item"><i class="fab fa-r-project"></i><span>R</span></div>
                     </div>
                 </div>
 
-                <!-- Frameworks & APIs -->
                 <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-layer-group"></i> Frameworks & APIs</h3>
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-bolt"></i>
-                            <span>FastAPI</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Django</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Flask</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-exchange-alt"></i>
-                            <span>RESTful APIs</span>
-                        </div>
+                        <div class="skill-item"><i class="fas fa-fire"></i><span>PyTorch</span></div>
+                        <div class="skill-item"><i class="fas fa-cube"></i><span>TensorFlow</span></div>
+                        <div class="skill-item"><i class="fas fa-chart-line"></i><span>Scikit-learn</span></div>
+                        <div class="skill-item"><i class="fas fa-cog"></i><span>XGBoost</span></div>
+                        <div class="skill-item"><i class="fas fa-shield-alt"></i><span>FGSM / PGD / CLEVER</span></div>
+                        <div class="skill-item"><i class="fas fa-dna"></i><span>Genetic Algorithms</span></div>
                     </div>
                 </div>
 
-                <!-- Machine & Deep Learning -->
                 <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-brain"></i> Machine & Deep Learning</h3>
+                    <h3><i class="fas fa-shield-alt"></i> Security</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-fire"></i>
-                            <span>PyTorch</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cube"></i>
-                            <span>TensorFlow</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Scikit-learn</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cog"></i>
-                            <span>XGBoost</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Keras</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-flask"></i>
-                            <span>PyCaret</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-robot"></i>
-                            <span>LLMs / RAG</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>FGSM/PGD</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-network-wired"></i>
-                            <span>MITRE ATT&CK</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-dna"></i>
-                            <span>Genetic Algorithms</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-wave-square"></i>
-                            <span>Diffusion & VAE</span>
-                        </div>
+                        <div class="skill-item"><i class="fas fa-network-wired"></i><span>MITRE ATT&amp;CK</span></div>
+                        <div class="skill-item"><i class="fas fa-search"></i><span>Splunk</span></div>
+                        <div class="skill-item"><i class="fas fa-eye"></i><span>Wazuh</span></div>
+                        <div class="skill-item"><i class="fas fa-bolt"></i><span>Suricata</span></div>
+                        <div class="skill-item"><i class="fas fa-file-code"></i><span>Sigma</span></div>
+                        <div class="skill-item"><i class="fas fa-crosshairs"></i><span>Threat Modeling</span></div>
                     </div>
                 </div>
 
-                <!-- Security Tooling -->
                 <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-shield-alt"></i> Security Tooling</h3>
+                    <h3><i class="fas fa-server"></i> Infrastructure</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-search"></i>
-                            <span>Splunk</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-eye"></i>
-                            <span>Wazuh SIEM</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-bolt"></i>
-                            <span>Suricata IDS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-file-code"></i>
-                            <span>Sigma Rules</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-bug"></i>
-                            <span>OWASP</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-fingerprint"></i>
-                            <span>Digital Forensics</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-crosshairs"></i>
-                            <span>Threat Modeling</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-flag"></i>
-                            <span>CTF Operations</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DevOps & Cloud -->
-                <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-server"></i> DevOps & Cloud</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-dharmachakra"></i>
-                            <span>Kubernetes</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Actions CI/CD</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Azure</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-area"></i>
-                            <span>Prometheus/Grafana</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Science & Analytics -->
-                <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-chart-bar"></i> Data Science & Analytics</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>NumPy</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Pandas</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-calculator"></i>
-                            <span>SciPy</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-area"></i>
-                            <span>Matplotlib</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Seaborn</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-pie"></i>
-                            <span>Plotly</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-map"></i>
-                            <span>GeoPandas</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- NLP & Computer Vision -->
-                <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-eye"></i> NLP & Computer Vision</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-language"></i>
-                            <span>NLTK</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-comments"></i>
-                            <span>SpaCy</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Visualization & BI -->
-                <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-chart-pie"></i> Visualization & BI</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-chart-bar"></i>
-                            <span>Tableau</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Power BI</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-file-excel"></i>
-                            <span>Advanced Excel</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Languages -->
-                <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-globe"></i> Languages</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-comment"></i>
-                            <span>English (Fluent)</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-comment"></i>
-                            <span>Hindi (Fluent)</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-comment"></i>
-                            <span>Spanish (Basic)</span>
-                        </div>
+                        <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                        <div class="skill-item"><i class="fas fa-dharmachakra"></i><span>Kubernetes</span></div>
+                        <div class="skill-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+                        <div class="skill-item"><i class="fab fa-github"></i><span>GitHub Actions</span></div>
+                        <div class="skill-item"><i class="fas fa-chart-area"></i><span>Prometheus / Grafana</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Certifications</h2>
-            
-            <div class="certifications-grid">
-                <!-- Cybersecurity -->
-                <div class="cert-category" data-aos="fade-up">
-                    <div class="cert-category-header">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Cybersecurity</h3>
-                    </div>
-                    <div class="cert-list">
-                        <div class="cert-item">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i>
-                            <div class="cert-details">
-                                <h4>(ISC)&#178; Certified in Cybersecurity (CC)</h4>
-                                <p>ISC2 &mdash; <strong>Active</strong></p>
-                            </div>
-                        </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate" style="color: #f59e0b;"></i>
-                            <div class="cert-details">
-                                <h4>(ISC)&#178; CISSP</h4>
-                                <p>In Progress &mdash; Target May 2026</p>
-                            </div>
-                        </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Career Essentials in Cybersecurity</h4>
-                                <p>Microsoft and LinkedIn</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Science & Analytics -->
-                <div class="cert-category" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cert-category-header">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Data Science & Analytics</h3>
-                    </div>
-                    <div class="cert-list">
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Data Science Specialization</h4>
-                                <p>Johns Hopkins University</p>
-                            </div>
-                        </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Data Analytics Certification</h4>
-                                <p>Google</p>
-                            </div>
-                        </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Professional Data Science Certification</h4>
-                                <p>IBM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI & Deep Learning -->
-                <div class="cert-category" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cert-category-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>AI & Deep Learning</h3>
-                    </div>
-                    <div class="cert-list">
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Deep Learning: Neural Network, AI, ChatGPT</h4>
-                                <p>Industry Certification</p>
-                            </div>
-                        </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Deep Learning and Computer Vision</h4>
-                                <p>Industry Certification</p>
-                            </div>
-                        </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Mathematical Foundations of Machine Learning</h4>
-                                <p>Industry Certification</p>
-                            </div>
-                        </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Artificial Intelligence: Building AI + LLM and ChatGPT</h4>
-                                <p>Industry Certification</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Programming -->
-                <div class="cert-category" data-aos="fade-up" data-aos-delay="300">
-                    <div class="cert-category-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming</h3>
-                    </div>
-                    <div class="cert-list">
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Python Specialization</h4>
-                                <p>University of Michigan</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cloud Computing -->
-                <div class="cert-category" data-aos="fade-up" data-aos-delay="400">
-                    <div class="cert-category-header">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud Computing</h3>
-                    </div>
-                    <div class="cert-list">
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <div class="cert-details">
-                                <h4>Amazon Web Services Certification</h4>
-                                <p>Amazon</p>
-                            </div>
-                        </div>
-                    </div>
+            <div style="margin-top: 2.5rem; text-align: center;" data-aos="fade-up">
+                <h3 style="font-size: 1rem; opacity: 0.8; margin-bottom: 0.75rem;">Certifications</h3>
+                <div class="cert-inline">
+                    <span class="cert-chip"><i class="fas fa-certificate" style="color: #10b981;"></i> ISC2 Certified in Cybersecurity (CC)</span>
+                    <span class="cert-chip"><i class="fas fa-certificate" style="color: #f59e0b;"></i> OSCP, in progress</span>
                 </div>
             </div>
         </div>
@@ -1350,11 +946,11 @@
     <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <h2 class="section-title" data-aos="fade-up">Contact</h2>
             <p class="section-subtitle" data-aos="fade-up">
-                Seeking research scientist, ML engineer, and cybersecurity engineer opportunities
+                Happy to talk about research, collaborations, or any of the work above.
             </p>
-            
+
             <div class="contact-content" data-aos="fade-up">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1364,30 +960,35 @@
                             <a href="mailto:raj02mayank@gmail.com">raj02mayank@gmail.com</a>
                         </div>
                     </div>
-    
+
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>Affiliation</h4>
+                            <p>Department of Computer Science<br>University of Illinois Chicago</p>
+                        </div>
+                    </div>
+
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Location</h4>
-                            <p>Dartmouth, MA, USA</p>
+                            <p>Chicago, IL, USA</p>
                         </div>
                     </div>
                 </div>
-
-            </div> <!-- close contact-content -->
+            </div>
 
             <div class="cta-section" data-aos="fade-up">
-                <h3>Open to Opportunities</h3>
-                <p>
-                    STEM OPT eligible with 3 years of U.S. work authorization. Available to start Summer/Fall 2026. 
-                    Interested in discussing roles, collaborations, or my research? Let's connect.
-                </p>
                 <div class="cta-buttons">
                     <a href="mailto:raj02mayank@gmail.com" class="btn btn-primary">
                         <i class="fas fa-envelope"></i> Send Email
                     </a>
-                    <a href="https://www.linkedin.com/in/mayank02raj" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    <a href="https://scholar.google.com/citations?user=AtN6P1QAAAAJ" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                    <a href="https://github.com/mayank02raj" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> GitHub
                     </a>
                 </div>
             </div>
@@ -1400,35 +1001,51 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <h3>Mayank Raj</h3>
-                    <p>Cybersecurity Researcher & ML Engineer | STEM OPT Eligible</p>
+                    <p>Ph.D. student, Computer Science &bull; University of Illinois Chicago</p>
                 </div>
                 <div class="footer-right">
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mayank02raj" target="_blank">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="https://scholar.google.com/citations?user=AtN6P1QAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
                         </a>
-                        <a href="https://github.com/mayank02raj" target="_blank">
+                        <a href="https://github.com/mayank02raj" target="_blank" rel="noopener" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="mailto:raj02mayank@gmail.com">
+                        <a href="https://www.linkedin.com/in/mayank02raj" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:raj02mayank@gmail.com" aria-label="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Mayank Raj. All rights reserved.</p>
+                <p>&copy; 2026 Mayank Raj</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="scroll-top">
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        function mrCopyBib(btn) {
+            var pre = btn.parentElement.querySelector('pre');
+            if (!pre) return;
+            navigator.clipboard.writeText(pre.innerText).then(function () {
+                var original = btn.textContent;
+                btn.textContent = 'copied';
+                setTimeout(function () { btn.textContent = original; }, 1500);
+            }).catch(function () {
+                btn.textContent = 'select and copy';
+            });
+        }
+    </script>
 </body>
 </html>
