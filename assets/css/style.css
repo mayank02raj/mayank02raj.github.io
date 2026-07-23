@@ -39,6 +39,24 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+/* ===========================
+   Theme-switch performance guard
+   ~250 elements on this page carry `transition: all 0.3s ease` via
+   var(--transition). Flipping .light-mode/.dark-mode changes their
+   background, color, border-color and box-shadow, so every one of them
+   animates for 300ms at once while the canvas keeps repainting.
+   This class is added by setTheme() for a single frame so the new theme
+   lands in one repaint instead of ~250 concurrent animations.
+   =========================== */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+    transition: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+}
+
 /* Dark Theme */
 body.dark-mode {
     --bg-light: #0f172a;
